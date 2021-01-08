@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
-
+const path = require("path");
+const router = require("express").Router();
 const PORT = process.env.PORT || 3000;
 
 const app = express();
@@ -18,11 +19,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouts", {
 });
 
 // routes
-// app.use(require("./routes/api-routes.js"));
-
-// app.listen(PORT, () => {
-//   console.log(`App running on port ${PORT}!`);
-// });
 
 app.use(require("./routes/api-routes.js"));
 
@@ -42,7 +38,7 @@ app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
 });
 
-
+module.exports = router;
 
 // notes to self 
 
@@ -64,3 +60,4 @@ app.listen(PORT, () => {
 // app.use… is kinda like picking out a new car and deciding what all the features that you want built into it.
 
 // This way all these things get handled in the middle of 1.Making the http request and 2. Sending the http request.
+
