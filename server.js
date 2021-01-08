@@ -24,7 +24,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouts", {
 //   console.log(`App running on port ${PORT}!`);
 // });
 
-require("./routes/api-routes.js");
+require("./routes/api-routes.js")(app);
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname + "/public/index.html"));
@@ -41,3 +41,6 @@ app.get("/stats", (req, res) => {
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
 });
+
+// ReferenceError: path is not defined
+//     at /Users/alexandrahionis/repos/Fitness-Tracker/server.js:34:18
