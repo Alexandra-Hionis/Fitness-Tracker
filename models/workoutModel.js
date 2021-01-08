@@ -23,21 +23,29 @@ const WorkoutSchema = new Schema({
   // Weight
   weight: {
     type: Number,
-    required: "How many pounds"
+    required: "How many pounds",
+    default: 0 
   },
   // Sets
   sets: {
     type: Number,
-    required: "How many sets"
+    required: "How many sets",
+    default: 0 
   },
   // Reps
   reps: {
     type: Number,
-    required: "How many reps"
+    required: "How many reps",
+    default: 0 
   },
   // Duration
   duration: {
     type: Number,
-    required: "How many minutes"
+    required: "How many minutes",
+    default: 0 
   }
 });
+
+const Workout = mongoose.model("Workout", workoutSchema);
+
+module.exports = Workout;
