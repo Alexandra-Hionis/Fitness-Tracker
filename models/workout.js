@@ -8,6 +8,8 @@ const workoutSchema = new Schema({
     type: Date,
     default: Date.now
   },
+  exercises: [
+    {
   // Name of workout
   name: {
     type: String,
@@ -43,6 +45,12 @@ const workoutSchema = new Schema({
     type: Number,
     required: "How many minutes",
     default: 0 
+  }
+}
+  ],
+  totalDuration: {
+    type: Number,
+    default: 0,
   }
 });
 
