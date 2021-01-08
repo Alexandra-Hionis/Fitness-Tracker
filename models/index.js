@@ -1,5 +1,5 @@
 module.exports = {
-    Workout: require('./workout')
+    Workout: require('./Workout')
   };
 
 //  So, when this file is loaded, it requires the workout.js file in the same directory. From there, it will then export that variable (so it may be used outside of the index.js file) to the Workout variable. This way, let's say that you do the following in another file:

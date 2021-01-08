@@ -1,4 +1,4 @@
-const db = require("../models");
+const {Workout} = require("../models");
 const router = require("express").Router();
 
 module.exports = function (app) {
@@ -55,4 +55,4 @@ module.exports = function (app) {
         });
     });
 }
-module.exports = router;
+// module.exports = router;
