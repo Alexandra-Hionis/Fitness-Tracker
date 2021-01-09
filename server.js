@@ -12,13 +12,21 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouts", {
-  useNewUrlParser: true,
-  useFindAndModify: false,
-  useUnifiedTopology: true,
-  useCreateIndex: true
-});
-
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouts", {
+//   useNewUrlParser: true,
+//   useFindAndModify: false,
+//   useUnifiedTopology: true,
+//   useCreateIndex: true
+// });
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/Workouts',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+);
 // routes
 
 require('./routes/api-routes.js')(app);
