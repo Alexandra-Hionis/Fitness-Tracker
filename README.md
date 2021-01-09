@@ -14,8 +14,8 @@
 Mongo database with a Mongoose schema. Uses MongoDB, Node and Express.
 ## Usage
 A consumer will reach their fitness goals more quickly when they track their workout progress. Always nice to track progress. They should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, they should be able to track my distance traveled. 
-<!-- ![image 1](assets/images/sample-1.png) -->
 
+[image 1](assets/images/workout.png) 
 
 ## License
 ISC
