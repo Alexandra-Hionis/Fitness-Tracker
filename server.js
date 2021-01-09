@@ -19,7 +19,7 @@ app.use(express.static("public"));
 //   useCreateIndex: true
 // });
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/workouts',
+  process.env.MONGODB_URI || 'mongodb://localhost/Workouts',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
